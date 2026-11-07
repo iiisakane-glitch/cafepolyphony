@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" translate="no">
 
 <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
   <!-- Google tag (gtag.js) -->
@@ -12,6 +12,7 @@
     gtag('config', 'G-Y2W2DN50NQ');
   </script>
   <meta charset="UTF-8">
+  <meta name="google" content="notranslate">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
   <title>Cafe Polyphony カフェポリフォニー 2026.5.11 GRAND OPEN</title>
@@ -29,14 +30,14 @@
   <meta name="description" content="南堀江に誕生する、ソーシャルグッドなコミュニティカフェ。2026年5月11日グランドオープン。">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="css/styles.css" rel="stylesheet">
+  <link href="css/styles.css?v=20261107-parfait" rel="stylesheet">
   <link
     href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Noto+Serif+JP:wght@300;400;500;600&family=Noto+Sans+JP:wght@300;400;500&display=swap"
     rel="stylesheet">
 
 </head>
 
-<body>
+<body class="notranslate">
 
   <!-- 00. GLOBAL NAV -->
   <header>
@@ -52,22 +53,36 @@
           <li><a href="#sns">Follow</a></li>
         </ul>
 
-        <!-- humburger menu -->
-        <div class="ham_container">
-          <input type="checkbox" id="check">
-          <label for="check" class="hamburger">
-            <span></span>
-          </label>
-          <nav class="ham_nav">
-            <ul class="ham_list">
-              <li><a href="#concept">Concept</a></li>
-              <li><a href="#news">News</a></li>
-              <li><a href="#menu">Menu</a></li>
-              <li><a href="#staff">Staff</a></li>
-              <li><a href="#access">Access</a></li>
-              <li><a href="#sns">Follow</a></li>
-            </ul>
-          </nav>
+        <div class="nav-actions">
+          <div class="language-switcher">
+            <span class="language-label notranslate" aria-hidden="true" translate="no">Language</span>
+            <label class="sr-only" for="language-select">Language</label>
+            <select id="language-select" aria-label="Language">
+              <option value="ja">日本語</option>
+              <option value="en">English</option>
+              <option value="zh-CN">简体中文</option>
+              <option value="zh-TW">繁體中文</option>
+              <option value="ko">한국어</option>
+            </select>
+          </div>
+
+          <!-- humburger menu -->
+          <div class="ham_container">
+            <input type="checkbox" id="check">
+            <label for="check" class="hamburger">
+              <span></span>
+            </label>
+            <nav class="ham_nav">
+              <ul class="ham_list">
+                <li><a href="#concept">Concept</a></li>
+                <li><a href="#news">News</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#staff">Staff</a></li>
+                <li><a href="#access">Access</a></li>
+                <li><a href="#sns">Follow</a></li>
+              </ul>
+            </nav>
+          </div>
         </div>
       </div>
     </nav>
@@ -88,20 +103,16 @@
         <span class="hero-promo-icon">🎁</span>
         <span>LINEフォローでフィナンシェプレゼント</span>
       </div>
+      <a class="hero-menu-link fade-in" href="#matcha-parfait">新作「抹茶パフェ」780円（税込）を見る →</a>
       <div class="hero-hours fade-in">
         <table class="hero-hours-table">
           <tr>
-            <th>月〜金</th>
-            <td>11:30 ～ 16:00</td>
-          </tr>
-          <tr>
-            <th>金曜日のみ</th>
-            <td>18:00 〜 20:00</td>
+            <th>月・水・木・金</th>
+            <td>11:30 ～ 16:30<br>（L.O. 16:00）</td>
           </tr>
           <tr>
             <th>定休日</th>
-            <td>土曜日</td>
-            <td>日曜日</td>
+            <td>火・土・日</td>
           </tr>
         </table>
       </div>
@@ -144,6 +155,11 @@
         <p class="section-heading fade-in">新着情報</p>
         <ul class="news-list">
           <li class="news-item fade-in">
+            <time class="news-date" datetime="2026-11-07">2026.11.07</time>
+            <span class="news-tag">お知らせ</span>
+            <p class="news-title">営業時間が変更になりました。月・水・木・金 11:30〜16:30（L.O. 16:00）、定休日は火・土・日です。</p>
+          </li>
+          <li class="news-item fade-in">
             <time class="news-date" datetime="2026-05-30">2026.05.30</time>
             <span class="news-tag">お知らせ</span>
             <p class="news-title"><a href="https://www.hotpepper.jp/strJ004612649/" target="_blank" rel="noopener noreferrer"
@@ -178,20 +194,33 @@
     <section class="menu" id="menu">
       <div class="section-inner">
         <h2 class="menu-label fade-in">Menu</h2>
+        <article class="parfait-feature fade-in" id="matcha-parfait" aria-labelledby="parfait-title">
+          <a class="parfait-poster" href="img/matcha-parfait.png" target="_blank" rel="noopener noreferrer" aria-label="抹茶パフェのポスターを別タブで拡大表示">
+            <img src="img/matcha-parfait.png" alt="抹茶パフェ。鹿児島県産抹茶使用、手づくりの白餡の花飾り。黒蜜はお好みで。780円（税込）。" width="1055" height="1491" loading="lazy" decoding="async">
+          </a>
+          <div class="parfait-copy">
+            <p class="parfait-eyebrow">新作スイーツ</p>
+            <h3 id="parfait-title">抹茶パフェ</h3>
+            <p class="parfait-lead">こだわりを重ねた、<br>贅沢な抹茶パフェ。</p>
+            <p class="parfait-description">鹿児島県産の抹茶と、手づくりの白餡の花飾り。お好みで黒蜜をかけて、濃厚で上品な甘さをお楽しみください。</p>
+            <p class="parfait-price">¥780<span class="parfait-tax">（税込）</span></p>
+            <a class="parfait-visit" href="#access">お店へのアクセス →</a>
+          </div>
+        </article>
         <p class="menu-heading fade-in">ランチタイム</p>
         <div class="menu-grid">
           <div class="menu-card fade-in">
             <div class="menu-card-name">
-              <h3>週替わりランチプレート</h3>
+              <h3>日替わりランチ</h3>
             </div>
-            <div class="menu-card-desc">ガッツリ＆栄養バランスの整った週替わりのプレートランチ</div>
+            <div class="menu-card-desc">ガッツリ＆栄養バランスの整った日替わりランチ</div>
             <div class="menu-card-price">¥1,000<span class="tax">（税込）</span></div>
           </div>
           <div class="menu-card fade-in">
             <div class="menu-card-name">
               <h3>ランチプレート＋ドリンクセット</h3>
             </div>
-            <div class="menu-card-desc">週替わりプレートにお好きなドリンクを添えて</div>
+            <div class="menu-card-desc">日替わりランチにお好きなドリンクを添えて</div>
             <div class="menu-card-price">¥1,200<span class="tax">（税込）</span></div>
           </div>
           <div class="menu-card fade-in">
@@ -279,12 +308,6 @@
             <p class="staff-desc">SNSでカフェの日常をお届けします。お店の雰囲気やメニューの魅力を、あたたかい視点で発信していきます。</p>
           </div>
           <div class="staff-card fade-in">
-            <div class="staff-avatar">😊</div>
-            <div class="staff-role">Hall</div>
-            <div class="staff-name">りこちゃん</div>
-            <p class="staff-desc">いつも笑顔で、お店の雰囲気をぱっと明るくしてくれる存在。お客さまが気持ちよく過ごせるよう心を込めてお迎えします。</p>
-          </div>
-          <div class="staff-card fade-in">
             <div class="staff-avatar">🤝</div>
             <div class="staff-role">Support</div>
             <div class="staff-name">まるちゃん</div>
@@ -314,9 +337,8 @@
               <tr>
                 <th>営業</th>
                 <td>
-                  月〜金 11:30 ～ 16:00<br>
-                  金曜日のみ 18:00 ～ 20:00<br>
-                  定休日 土曜日 日曜日<br>
+                  月・水・木・金 11:30 ～ 16:30（L.O. 16:00）<br>
+                  定休日 火・土・日<br>
                   <span style="font-size:0.85em; color:var(--text-light);">※夜の貸し切りイベントの予約も承っています。</span>
                 </td>
               </tr>
@@ -366,6 +388,201 @@
   </footer>
 
   <script>
+
+    // ===== LANGUAGE SWITCHER (BUILT-IN TRANSLATIONS) =====
+    (function () {
+      const languageSelect = document.getElementById('language-select');
+      languageSelect.addEventListener('change', function () {
+        const url = new URL(window.location.href);
+        if (languageSelect.value === 'ja') {
+          url.searchParams.delete('lang');
+        } else {
+          url.searchParams.set('lang', languageSelect.value);
+        }
+        window.location.href = url.toString();
+      });
+    })();
+
+    (function () {
+      const translations = {
+        en: {
+          title: 'Cafe Polyphony | Community Cafe in Minamihorie, Osaka',
+          nav: ['Concept', 'News', 'Menu', 'Team', 'Access', 'Follow'],
+          promo: 'Follow us on LINE and receive a financier pastry.',
+          hours: ['Mon / Wed / Thu / Fri', 'Closed', 'Tue / Sat / Sun'],
+          concept: ['A place where many voices come together.', 'Where every voice finds harmony.'],
+          cards: [['Food that cares for you', 'Wholesome meals made with seasonal ingredients, created to be enjoyed every day.'], ['A place to slow down', 'Whether you are by yourself or with someone, this is a welcoming place to relax in Minamihorie.'], ['A place to connect', 'Over coffee, people can meet and connect naturally. We hope to become a new crossroads for the neighborhood.']],
+          newsHeading: 'Latest News',
+          newsTags: ['News', 'News', 'News', 'Menu', 'News', 'Event'],
+          news: ['Our opening hours have changed. Mon / Wed / Thu / Fri 11:30-16:30 (last order 16:00). Closed Tue / Sat / Sun.', 'Our Hot Pepper Gourmet page is now available.', 'Our official LINE is here. Follow us for complimentary treats.', 'We have announced our opening-day lunch menu.', 'Grand opening confirmed for Monday, May 11.', 'The Cafe Polyphony website is now open.'],
+          menuHeading: 'Lunch',
+          parfait: { hero: 'Discover our new Matcha Parfait — ¥780 (tax included) →', eyebrow: 'New Dessert', title: 'Matcha Parfait', lead: 'Layers of care in a luxurious matcha parfait.', description: 'Made with matcha from Kagoshima and a handmade white bean paste flower. Add brown sugar syrup to taste and enjoy a rich, refined sweetness.', tax: ' (tax included)', visit: 'Getting here →', imageAlt: 'Matcha parfait with Kagoshima matcha and a handmade white bean paste flower. Optional brown sugar syrup. ¥780, tax included.', imageLabel: 'View the matcha parfait poster in a new tab' },
+          menu: [['Daily Lunch', 'A hearty daily lunch with balanced nutrition.'], ['Lunch Plate + Drink Set', 'Your choice of drink served with our daily lunch.'], ['Daily Bento', 'Takeaway bento boxes available in two sizes.'], ['Chiffon Cake + Drink Set', 'Fluffy chiffon cake served with your choice of drink.'], ['Coffee / Tea / Cafe au Lait', 'Hot or iced. Please enjoy a carefully brewed cup.'], ['Other Drinks', 'A selection of juices is also available.']],
+          tax: ' (tax included)',
+          shop: 'Visit our online shop',
+          note: 'Menu items may change depending on ingredient availability.',
+          staffHeading: 'Meet Our Team',
+          staff: ['I love meeting people and value creating a space where everyone can feel at ease.', 'I share everyday moments from the cafe on social media, with a warm look at our atmosphere and menu.', 'Quiet but dependable, she notices the little details and supports everyone with kindness.'],
+          accessHeading: 'Getting Here',
+          accessLabels: ['Address', 'Phone', 'Hours', 'Nearest station'],
+          address: '1F East Side, Horie Villa<br>3-15-7 Minamihorie, Nishi-ku, Osaka 550-0015, Japan',
+          accessHours: 'Mon / Wed / Thu / Fri 11:30-16:30 (last order 16:00)<br>Closed Tue / Sat / Sun<br><span style="font-size:0.85em; color:var(--text-light);">Private evening events can be reserved.</span>',
+          station: 'Osaka Metro Sennichimae Line / Nagahori Tsurumi-ryokuchi Line<br>About a 5-minute walk from Exit 6 of Nishi-Nagahori Station',
+          sns: 'Follow our everyday cafe moments on Instagram.<br>We look forward to seeing you there.',
+          follow: 'Follow us on Instagram',
+          line: 'Official LINE'
+        },
+        'zh-CN': {
+          title: 'Cafe Polyphony | 大阪南堀江社区咖啡馆',
+          nav: ['理念', '资讯', '菜单', '团队', '交通', '关注我们'],
+          promo: '关注官方 LINE，即可获赠一份费南雪蛋糕。',
+          hours: ['周一、三、四、五', '休息日', '周二、六、日'],
+          concept: ['这里是让不同声音交织相遇的地方。', '让每一种声音都能找到和谐之处。'],
+          cards: [['滋养身心的食物', '选用时令食材，精心烹制清淡健康的餐食。希望您每天享用也不会厌倦。'], ['一个可以放松身心的空间', '无论独自一人还是与人同行，这里都是一个可以放松、不必在意时间的温暖去处。'], ['建立联系的地方', '以咖啡为契机，让人与人自然相识。我们希望成为社区新的交汇点。']],
+          newsHeading: '最新资讯',
+          newsTags: ['通知', '通知', '通知', '菜单', '通知', '活动'],
+          news: ['营业时间已变更。周一、三、四、五 11:30-16:30（最后点单 16:00），周二、六、日休息。', 'Hot Pepper Gourmet 页面现已上线。', '官方 LINE 已开通，关注即可获得免费小点心。', '已发布开业当天的午餐菜单。', '5月11日（周一）正式开业。', 'Cafe Polyphony 官方网站现已上线。'],
+          menuHeading: '午餐时间',
+          parfait: { hero: '新品抹茶芭菲 780日元（含税）→', eyebrow: '新品甜点', title: '抹茶芭菲', lead: '层层用心，尽享奢华抹茶芭菲。', description: '选用鹿儿岛县产抹茶，点缀手工白豆沙花。可按喜好淋上黑糖蜜，品味浓郁而优雅的甜味。', tax: '（含税）', visit: '交通指南 →', imageAlt: '抹茶芭菲，选用鹿儿岛县产抹茶及手工白豆沙花，可按喜好添加黑糖蜜。780日元（含税）。', imageLabel: '在新标签页中放大查看抹茶芭菲海报' },
+          menu: [['每日午餐', '营养均衡、份量十足的每日午餐。'], ['午餐拼盘加饮品套餐', '每日午餐搭配您喜欢的饮品。'], ['每日便当', '提供两种尺寸的外带便当。'], ['戚风蛋糕加饮品套餐', '松软戚风蛋糕搭配您喜欢的饮品。'], ['咖啡 / 红茶 / 咖啡欧蕾', '提供热饮或冰饮，请享用精心冲煮的一杯。'], ['其他饮品', '另有多种果汁可供选择。']],
+          tax: '（含税）',
+          shop: '前往线上商店',
+          note: '菜单可能会因食材供应情况而变更。',
+          staffHeading: '我们的团队',
+          staff: ['我喜欢与人交流，并重视营造让每位客人都能安心放松的空间。', '我会通过社交媒体分享咖啡馆的日常，以温暖的视角介绍店内氛围与菜单。', '她话不多却很可靠，善于留意细节，温柔地支持着大家。'],
+          accessHeading: '交通指南',
+          accessLabels: ['地址', '电话', '营业时间', '最近车站'],
+          address: '日本大阪府大阪市西区南堀江3-15-7<br>堀江 Villa 1层东侧，邮编550-0015',
+          accessHours: '周一、三、四、五 11:30-16:30（最后点单 16:00）<br>周二、六、日休息<br><span style="font-size:0.85em; color:var(--text-light);">可预约夜间包场活动。</span>',
+          station: '大阪 Metro 千日前线 / 长堀鹤见绿地线<br>从西长堀站6号出口步行约5分钟',
+          sns: '我们会在 Instagram 分享咖啡馆的日常。<br>期待您的关注。',
+          follow: '关注 Instagram',
+          line: '官方 LINE'
+        },
+        'zh-TW': {
+          title: 'Cafe Polyphony | 大阪南堀江社區咖啡館',
+          nav: ['理念', '最新消息', '菜單', '團隊', '交通', '追蹤我們'],
+          promo: '追蹤官方 LINE，即可獲贈一份費南雪蛋糕。',
+          hours: ['週一、三、四、五', '公休日', '週二、六、日'],
+          concept: ['這裡是讓不同聲音交織相遇的地方。', '讓每一種聲音都能找到和諧之處。'],
+          cards: [['滋養身心的食物', '選用當季食材，精心烹調清爽健康的餐點，讓您每天享用也不會膩。'], ['可以放鬆的空間', '無論獨自一人或與人同行，這裡都是能自在放鬆、不必在意時間的溫暖去處。'], ['建立連結的地方', '以咖啡為契機，讓人與人自然相識。我們希望成為社區新的交會點。']],
+          newsHeading: '最新消息',
+          newsTags: ['公告', '公告', '公告', '菜單', '公告', '活動'],
+          news: ['營業時間已變更。週一、三、四、五 11:30-16:30（最後點餐 16:00），週二、六、日公休。', 'Hot Pepper Gourmet 頁面現已上線。', '官方 LINE 已開通，追蹤即可獲得免費小點心。', '已公布開幕當天的午餐菜單。', '5月11日（週一）正式開幕。', 'Cafe Polyphony 官方網站現已上線。'],
+          menuHeading: '午餐時段',
+          parfait: { hero: '新品抹茶百匯 780日圓（含稅）→', eyebrow: '新品甜點', title: '抹茶百匯', lead: '層層用心，盡享奢華抹茶百匯。', description: '選用鹿兒島縣產抹茶，點綴手工白豆沙花。可依喜好淋上黑糖蜜，品味濃郁而優雅的甜味。', tax: '（含稅）', visit: '交通指南 →', imageAlt: '抹茶百匯，選用鹿兒島縣產抹茶及手工白豆沙花，可依喜好添加黑糖蜜。780日圓（含稅）。', imageLabel: '在新分頁中放大檢視抹茶百匯海報' },
+          menu: [['每日午餐', '營養均衡、份量十足的每日午餐。'], ['午餐拼盤加飲品套餐', '每日午餐搭配您喜歡的飲品。'], ['每日便當', '提供兩種尺寸的外帶便當。'], ['戚風蛋糕加飲品套餐', '鬆軟戚風蛋糕搭配您喜歡的飲品。'], ['咖啡 / 紅茶 / 咖啡歐蕾', '提供熱飲或冰飲，請享用精心沖煮的一杯。'], ['其他飲品', '另有多種果汁可供選擇。']],
+          tax: '（含稅）',
+          shop: '前往線上商店',
+          note: '菜單可能因食材供應情況而變更。',
+          staffHeading: '我們的團隊',
+          staff: ['我喜歡與人交流，並重視營造讓每位客人都能安心放鬆的空間。', '我會透過社群媒體分享咖啡館的日常，以溫暖視角介紹店內氛圍與菜單。', '她話不多卻很可靠，善於留意細節，溫柔地支持著大家。'],
+          accessHeading: '交通指南',
+          accessLabels: ['地址', '電話', '營業時間', '最近車站'],
+          address: '日本大阪府大阪市西區南堀江3-15-7<br>堀江 Villa 1樓東側，郵遞區號550-0015',
+          accessHours: '週一、三、四、五 11:30-16:30（最後點餐 16:00）<br>週二、六、日公休<br><span style="font-size:0.85em; color:var(--text-light);">可預約夜間包場活動。</span>',
+          station: '大阪 Metro 千日前線 / 長堀鶴見綠地線<br>從西長堀站6號出口步行約5分鐘',
+          sns: '我們會在 Instagram 分享咖啡館的日常。<br>期待您的追蹤。',
+          follow: '追蹤 Instagram',
+          line: '官方 LINE'
+        },
+        ko: {
+          title: 'Cafe Polyphony | 오사카 미나미호리에 커뮤니티 카페',
+          nav: ['소개', '소식', '메뉴', '팀', '오시는 길', '팔로우'],
+          promo: '공식 LINE을 팔로우하면 휘낭시에를 드립니다.',
+          hours: ['월・수・목・금', '휴무일', '화・토・일'],
+          concept: ['이곳은 서로 다른 목소리가 어우러지는 곳입니다.', '모든 목소리가 조화를 찾는 곳.'],
+          cards: [['몸을 생각하는 음식', '제철 식재료로 만든 부담 없고 건강한 식사를 준비합니다. 매일 먹어도 질리지 않는 메뉴를 전합니다.'], ['편안히 머물 수 있는 공간', '혼자서도, 함께여도 좋습니다. 시간에 쫓기지 않고 편히 쉴 수 있는 미나미호리에의 아늑한 공간입니다.'], ['연결이 시작되는 곳', '카페를 계기로 사람들이 자연스럽게 만나고 이어집니다. 지역의 새로운 교차점이 되고자 합니다.']],
+          newsHeading: '새 소식',
+          newsTags: ['안내', '안내', '안내', '메뉴', '안내', '이벤트'],
+          news: ['영업시간이 변경되었습니다. 월・수・목・금 11:30-16:30(라스트 오더 16:00), 화・토・일 휴무입니다.', 'Hot Pepper Gourmet 페이지가 열렸습니다.', '공식 LINE이 개설되었습니다. 팔로우하면 무료 간식을 드립니다.', '오픈 당일의 런치 메뉴를 공개했습니다.', '5월 11일 월요일 그랜드 오픈을 확정했습니다.', 'Cafe Polyphony 공식 웹사이트를 열었습니다.'],
+          menuHeading: '런치 타임',
+          parfait: { hero: '신메뉴 말차 파르페 780엔(세금 포함) 보기 →', eyebrow: '새로운 디저트', title: '말차 파르페', lead: '정성을 겹겹이 담은 고급스러운 말차 파르페.', description: '가고시마현산 말차에 수제 흰 앙금 꽃을 더했습니다. 취향에 따라 흑당 시럽을 곁들여 진하고 우아한 달콤함을 즐겨 보세요.', tax: ' (세금 포함)', visit: '오시는 길 →', imageAlt: '가고시마현산 말차와 수제 흰 앙금 꽃을 곁들인 말차 파르페. 흑당 시럽은 취향에 따라 추가. 780엔(세금 포함).', imageLabel: '새 탭에서 말차 파르페 포스터 크게 보기' },
+          menu: [['오늘의 런치', '든든하고 영양 균형이 좋은 오늘의 런치입니다.'], ['런치 플레이트 + 음료 세트', '오늘의 런치에 좋아하는 음료를 곁들여 드세요.'], ['오늘의 도시락', '테이크아웃 도시락을 두 가지 크기로 준비합니다.'], ['시폰 케이크 + 음료 세트', '폭신한 시폰 케이크와 좋아하는 음료를 함께 즐기세요.'], ['커피 / 홍차 / 카페오레', '따뜻하게 또는 차갑게, 정성껏 내린 한 잔을 즐겨 보세요.'], ['기타 음료', '여러 종류의 주스도 준비되어 있습니다.']],
+          tax: ' (세금 포함)',
+          shop: '온라인 스토어로 이동',
+          note: '식재료 수급 상황에 따라 메뉴가 변경될 수 있습니다.',
+          staffHeading: '저희를 소개합니다',
+          staff: ['사람을 만나는 것을 좋아하며, 누구나 편안하게 머물 수 있는 공간을 소중히 생각합니다.', 'SNS를 통해 카페의 일상을 전합니다. 따뜻한 시선으로 카페 분위기와 메뉴의 매력을 소개합니다.', '말수는 적지만 믿음직스럽고 세심하게 모두를 도와줍니다.'],
+          accessHeading: '오시는 길',
+          accessLabels: ['주소', '전화', '영업시간', '가까운 역'],
+          address: '우편번호 550-0015<br>오사카부 오사카시 니시구 미나미호리에 3-15-7<br>호리에 빌라 1층 동쪽',
+          accessHours: '월・수・목・금 11:30-16:30(라스트 오더 16:00)<br>화・토・일 휴무<br><span style="font-size:0.85em; color:var(--text-light);">저녁 대관 이벤트도 예약할 수 있습니다.</span>',
+          station: '오사카 메트로 센니치마에선 / 나가호리쓰루미료쿠치선<br>니시나가호리역 6번 출구에서 도보 약 5분',
+          sns: 'Instagram에서 카페의 일상을 전하고 있습니다.<br>팔로우하고 소식을 받아보세요.',
+          follow: 'Instagram 팔로우',
+          line: '공식 LINE'
+        }
+      };
+
+      const language = new URLSearchParams(window.location.search).get('lang');
+      const pack = translations[language];
+      if (!pack) return;
+
+      const setText = function (selector, value) {
+        const element = document.querySelector(selector);
+        if (element) element.textContent = value;
+      };
+      const setAllText = function (selector, values) {
+        document.querySelectorAll(selector).forEach(function (element, index) {
+          if (values[index] !== undefined) element.textContent = values[index];
+        });
+      };
+      const setNews = function (values) {
+        document.querySelectorAll('.news-title').forEach(function (element, index) {
+          const link = element.querySelector('a');
+          if (link) {
+            const textNode = Array.from(link.childNodes).find(function (node) { return node.nodeType === Node.TEXT_NODE; });
+            if (textNode) textNode.nodeValue = values[index];
+          } else {
+            element.textContent = values[index];
+          }
+        });
+      };
+
+      document.title = pack.title;
+      document.getElementById('language-select').value = language;
+      setAllText('.nav-links a, .ham_list a', pack.nav.concat(pack.nav));
+      setText('.hero-promo > span:last-child', pack.promo);
+      setAllText('.hero-hours-table th', pack.hours.slice(0, 2));
+      const hourDays = document.querySelectorAll('.hero-hours-table td');
+      hourDays[1].textContent = pack.hours[2];
+      setText('#concept .concept-catch', pack.concept[0]);
+      setText('#concept .concept-sub', pack.concept[1]);
+      setAllText('.concept-card h3', pack.cards.map(function (card) { return card[0]; }));
+      setAllText('.concept-card p', pack.cards.map(function (card) { return card[1]; }));
+      setText('#news .section-heading', pack.newsHeading);
+      setAllText('.news-tag', pack.newsTags);
+      setNews(pack.news);
+      setText('#menu .menu-heading', pack.menuHeading);
+      setText('.hero-menu-link', pack.parfait.hero);
+      setText('.parfait-eyebrow', pack.parfait.eyebrow);
+      setText('#parfait-title', pack.parfait.title);
+      setText('.parfait-lead', pack.parfait.lead);
+      setText('.parfait-description', pack.parfait.description);
+      setText('.parfait-tax', pack.parfait.tax);
+      setText('.parfait-visit', pack.parfait.visit);
+      document.querySelector('.parfait-poster').setAttribute('aria-label', pack.parfait.imageLabel);
+      document.querySelector('.parfait-poster img').alt = pack.parfait.imageAlt;
+      setAllText('.menu-card-name h3', pack.menu.map(function (item) { return item[0]; }));
+      setAllText('.menu-card-desc', pack.menu.map(function (item) { return item[1]; }));
+      setAllText('.tax', Array(6).fill(pack.tax));
+      setText('.menu-baked a', pack.shop);
+      setText('.menu-note', pack.note);
+      setText('.menu-insta-cta', pack.follow);
+      setText('#staff .section-heading', pack.staffHeading);
+      setAllText('.staff-desc', pack.staff);
+      setText('#access .section-heading', pack.accessHeading);
+      setAllText('.access-table th', pack.accessLabels);
+      const accessValues = document.querySelectorAll('.access-table td');
+      accessValues[0].innerHTML = pack.address;
+      accessValues[2].innerHTML = pack.accessHours;
+      accessValues[3].innerHTML = pack.station;
+      setText('.sns-text', '');
+      document.querySelector('.sns-text').innerHTML = pack.sns;
+      setText('.sns-btn', pack.follow);
+      setText('.sns-line-label', pack.line);
+    })();
 
     // ===== INTERSECTION OBSERVER (FADE-IN) =====
     (function () {
