@@ -583,9 +583,6 @@ a:hover{
   object-fit:cover;
   transition:transform .5s
 }
-.food-card:hover>picture img{
-  transform:scale(1.025)
-}
 .food-card:nth-child(2)>picture img{
   object-position:50% 54%
 }
@@ -826,7 +823,7 @@ a:hover{
 }
 .staff-grid{
   display:grid;
-  grid-template-columns:repeat(3,1fr);
+  grid-template-columns:repeat(2,1fr);
   gap:40px
 }
 .staff-grid article{
@@ -2189,5 +2186,70 @@ body {
     background: #a33342;
     color: #fff;
     font-weight: 500;
+  }
+}
+
+/* Quiet responses to a pointer; touch devices keep a steady layout. */
+@media (prefers-reduced-motion: no-preference) {
+  .button {
+    transition: background .2s, color .2s, transform .3s ease, box-shadow .3s ease;
+  }
+  .text-link > span[aria-hidden],
+  .social-links a > span:last-child {
+    transition: transform .3s ease;
+  }
+  .desktop-nav a {
+    position: relative;
+  }
+  .desktop-nav a::after {
+    content: '';
+    position: absolute;
+    inset: auto 0 -6px;
+    height: 1px;
+    background: currentColor;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .3s ease;
+  }
+  .desktop-nav a:focus-visible::after {
+    transform: scaleX(1);
+  }
+  .hero-lunch img,
+  .baked-photo > picture img,
+  .lunch-overview > picture img {
+    transition: transform .8s cubic-bezier(.22, 1, .36, 1);
+  }
+  .mobile-nav:not([hidden]) {
+    animation: menu-arrive .25s ease both;
+  }
+  @keyframes menu-arrive {
+    from { opacity: 0; transform: translateY(-8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+}
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px #142b491a;
+  }
+  .text-link:hover > span[aria-hidden] {
+    transform: translateX(3px);
+  }
+  .social-links a:hover > span:last-child {
+    transform: translate(3px, -3px);
+  }
+  .desktop-nav a:hover::after {
+    transform: scaleX(1);
+  }
+  .hero-lunch:hover img,
+  .food-card:hover > picture img,
+  .food-card:focus-within > picture img,
+  .baked-photo:hover > picture img,
+  .lunch-overview > picture:hover img {
+    transform: scale(1.025);
+  }
+  .button:active {
+    transform: translateY(0);
+    box-shadow: none;
   }
 }

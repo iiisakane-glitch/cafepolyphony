@@ -29,7 +29,7 @@ with zipfile.ZipFile(ARCHIVE) as archive:
     bento = Image.open(io.BytesIO(archive.read('website_images/03_bento_examples/local_20261105_yurinchi.jpg')))
     save_pair(bento.crop((40, 425, 500, 890)), 'bento', 700)
 
-save_pair(Image.open(ROOT / 'img/IMG_5887.jpg').crop((160, 510, 950, 1010)), 'lunch', 1000)
+save_pair(Image.open(ROOT / 'img/lunch-hamburg.jpg'), 'lunch', 1000)
 save_pair(Image.open(ROOT / 'img/IMG_5886.jpg').crop((0, 330, 525, 920)), 'chiffon', 700)
 save_pair(Image.open(ROOT / 'img/main0512.jpg'), 'storefront', 1000)
 save_pair(Image.open(ROOT / 'img/matcha-parfait.png'), 'matcha-parfait', 1055)
